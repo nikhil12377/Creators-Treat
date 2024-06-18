@@ -1,0 +1,42 @@
+// // https://tailwindcss.com/docs/using-with-preprocessors Important
+
+:root {
+  --nav-gutter: 24px;
+  --header-height: 100px;
+  --main-gap: 32px;
+}
+
+@media (min-width: 950px) {
+  :root {
+    --nav-gutter: 40px;
+  }
+}
+
+html {
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html.dark {
+  svg {
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}

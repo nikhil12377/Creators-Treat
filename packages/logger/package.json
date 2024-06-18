@@ -1,0 +1,29 @@
+{
+  "name": "@creators/logger",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": false,
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "clean": "rm -rf dist",
+    "dev": "father dev --quiet",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prepublishOnly": "father doctor && npm run build"
+  },
+  "dependencies": {
+    "morgan": "^1.10.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/morgan": "^1.9.9",
+    "eslint-config-custom": "*"
+  }
+}

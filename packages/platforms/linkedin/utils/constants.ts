@@ -1,0 +1,5 @@
+export const LIFECYCLE_STATE = "PUBLISHED";
+export const VISIBILITY = "PUBLIC";
+export const STATUS = "READY";
+export const SHARE_MEDIA_CATEGORY_NONE = "NONE";
+export const SHARE_MEDIA_CATEGORY_ARTICLE = "ARTICLE";

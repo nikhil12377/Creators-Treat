@@ -1,0 +1,17 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": [
+    "../apps",
+    "../packages",
+    "./apps",
+    "./packages"
+    // Add all your app and package directories here
+  ],
+  "eslint.options": {
+    "overrideConfigFile": "../.eslintrc.js",
+    "cache": false
+  }
+}

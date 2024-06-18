@@ -1,0 +1,48 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "concurrently \"next dev -p 3002\" \"npm run dev:tailwind\"",
+    "lint": "next lint",
+    "start": "next start",
+    "dev:tailwind": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.6",
+    "@emotion/is-prop-valid": "^1.2.2",
+    "@nextui-org/react": "^2.2.10",
+    "@nextui-org/system": "^2.0.15",
+    "@nextui-org/theme": "^2.1.18",
+    "@serwist/next": "^9.0.0-preview.21",
+    "@serwist/precaching": "^9.0.0-preview.21",
+    "@serwist/routing": "^9.0.0-preview.21",
+    "@serwist/strategies": "^9.0.0-preview.21",
+    "@serwist/sw": "^9.0.0-preview.21",
+    "autoprefixer": "^10.4.19",
+    "axios": "^1.6.8",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.0",
+    "concurrently": "^8.2.2",
+    "framer-motion": "^11.0.28",
+    "million": "^3.0.6",
+    "next": "^14.2.1",
+    "next-themes": "^0.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-config": "*",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.78",
+    "@types/react-dom": "^18.2.25",
+    "eslint-config-custom": "*",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "tsconfig": "*",
+    "typescript": "^5.4.5"
+  }
+}

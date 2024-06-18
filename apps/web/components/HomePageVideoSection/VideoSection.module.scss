@@ -1,0 +1,82 @@
+@mixin white-gradient {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+$animationSpeed: 42s; // Adjusted for smoother transition
+$cardCount: 13;
+$gapWidth: 32px;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translateX(-75vw);
+  }
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+  flex-wrap: nowrap; /* Prevent videos from wrapping */
+  margin: auto;
+
+  &::before,
+  &::after {
+    @include white-gradient;
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15vw;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slideTrack {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: fit-content;
+    gap: $gapWidth;
+  }
+
+  .videoContainer {
+    height: 50vh;
+    width: max-content;
+    border-radius: 16px;
+    transition: all 0.6s ease-out;
+    box-shadow: inset 0 0 10px #000;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, transparent 51.91%, rgba(0, 0, 0, 0.3) 75.88%);
+      box-shadow: inset -1px -280px 100px 2px rgba(0, 0, 0, 0.3);
+      border-radius: 16px; // Match the video border-radius
+    }
+
+    video {
+      height: 100%;
+      border-radius: 16px;
+    }
+  }
+
+  video:last-child {
+    margin-right: 0; /* Removing the right margin for the last video */
+  }
+}

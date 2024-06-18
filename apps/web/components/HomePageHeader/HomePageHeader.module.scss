@@ -1,0 +1,21 @@
+.container {
+  height: 100px !important;
+  header {
+    display: grid;
+    grid-template-columns: 1fr 185px 1fr;
+    gap: 24px;
+    width: 100%;
+    padding: 0 var(--nav-gutter);
+    grid-template-rows: var(--header-height);
+    align-items: center;
+  }
+
+  ul {
+    li {
+      a {
+        padding: 0 calc(var(--main-gap) / 2);
+        font-weight: 600;
+      }
+    }
+  }
+}

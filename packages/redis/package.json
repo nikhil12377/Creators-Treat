@@ -1,0 +1,19 @@
+{
+  "name": "@creators/redis",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/lodash.memoize": "^4.1.9",
+    "ioredis": "^5.3.2",
+    "lodash": "^4.17.21"
+  }
+}
